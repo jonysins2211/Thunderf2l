@@ -57,8 +57,8 @@ async def about_callback(client: Client, callback_query: CallbackQuery):
         buttons = [
             [InlineKeyboardButton(MSG_BUTTON_GET_HELP, callback_data="help_command")],
             [
-                InlineKeyboardButton(MSG_BUTTON_GITHUB, url="https://github.com/fyaz05/FileToLink"),
-                InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")
+                #InlineKeyboardButton(MSG_BUTTON_GITHUB, url="https://github.com/fyaz05/FileToLink"),
+               # InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")
             ]
         ]
         await handle_flood_wait(
@@ -143,3 +143,4 @@ async def fallback_callback(client: Client, callback_query: CallbackQuery):
         await handle_flood_wait(callback_query.answer, MSG_ERROR_CALLBACK_UNSUPPORTED, show_alert=True)
     except Exception as e:
         logger.error(f"Error in fallback callback: {e}", exc_info=True)
+
