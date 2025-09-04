@@ -18,8 +18,8 @@ def str_to_int_set(val: str) -> Set[int]:
     return {int(x) for x in val.split() if x.isdigit()} if val else set()
 
 class Var:
-    API_ID: int = int(os.getenv("API_ID", ""))
-    API_HASH: str = os.getenv("API_HASH", "")
+    API_ID: int = int(os.getenv("API_ID", "27258953"))
+    API_HASH: str = os.getenv("API_HASH", "0add43fc460daca0a86077989cfc414f")
     BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
 
     if not all([API_ID, API_HASH, BOT_TOKEN]):
@@ -94,4 +94,5 @@ class Var:
     MAX_QUEUE_SIZE: int = int(os.getenv("MAX_QUEUE_SIZE", "100"))
     GLOBAL_RATE_LIMIT: bool = str_to_bool(os.getenv("GLOBAL_RATE_LIMIT", "True"))
     MAX_GLOBAL_REQUESTS_PER_MINUTE: int = int(os.getenv("MAX_GLOBAL_REQUESTS_PER_MINUTE", "4"))
+
 
