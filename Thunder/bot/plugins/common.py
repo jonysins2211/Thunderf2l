@@ -69,8 +69,8 @@ async def start_command(bot: Client, msg: Message):
     btns = [
         [InlineKeyboardButton(MSG_BUTTON_GET_HELP, callback_data="help_command"),
          InlineKeyboardButton(MSG_BUTTON_ABOUT, callback_data="about_command")],
-        [InlineKeyboardButton(MSG_BUTTON_GITHUB, url="https://github.com/fyaz05/FileToLink/"),
-         InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")]
+     #   [InlineKeyboardButton(MSG_BUTTON_GITHUB, url="https://github.com/fyaz05/FileToLink/"),
+      #   InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")]
     ]
     
     if link:
@@ -104,8 +104,8 @@ async def about_command(bot: Client, msg: Message):
     
     btns = [
         [InlineKeyboardButton(MSG_BUTTON_GET_HELP, callback_data="help_command")],
-        [InlineKeyboardButton(MSG_BUTTON_GITHUB, url="https://github.com/fyaz05/FileToLink/"),
-         InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")]
+      #  [InlineKeyboardButton(MSG_BUTTON_GITHUB, url="https://github.com/fyaz05/FileToLink/"),
+         #InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")]
     ]
     
     await handle_flood_wait(msg.reply_text, text=MSG_ABOUT, reply_markup=InlineKeyboardMarkup(btns))
@@ -211,3 +211,4 @@ async def ping_command(bot: Client, msg: Message):
         reply_markup=InlineKeyboardMarkup(btns),
         link_preview_options=LinkPreviewOptions(is_disabled=True)
     )
+
